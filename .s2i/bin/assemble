@@ -18,7 +18,7 @@ echo "---> Building application from source..."
 pushd /code
 if [ -f composer.json ]; then
     echo "assemble script override"
-    export COMPOSER_CACHE_DIR=/code/composer-cache
+    #export COMPOSER_CACHE_DIR=/code/composer-cache
     echo "---> Installing composer dependencies..."
     composer install --no-dev --prefer-dist --no-interaction --no-ansi --optimize-autoloader
     # Remove all .git directories to save space.
