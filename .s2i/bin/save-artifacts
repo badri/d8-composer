@@ -1,8 +1,8 @@
 #!/bin/bash
-pushd /code >/dev/null
+# pushd /code >/dev/null
 python - <<-EOF
 import sys, tarfile
 tf = tarfile.open(fileobj=sys.stdout, mode="w|")
-tf.add("vendor")
+tf.add("composer-cache")
 EOF
-popd >/dev/null
+#popd >/dev/null
