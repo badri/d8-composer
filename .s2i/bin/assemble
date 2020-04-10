@@ -18,7 +18,7 @@ echo "---> Building application from source..."
 pushd /code
 if [ -f composer.json ]; then
     echo "assemble script override"
-    echo $COMPOSER_CACHE_DIR
+    export COMPOSER_CACHE_DIR=/tmp/composer
     sleep 20
     echo "---> Installing composer dependencies..."
     composer install --no-dev --prefer-dist --no-interaction --no-ansi --optimize-autoloader

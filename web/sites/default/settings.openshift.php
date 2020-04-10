@@ -11,12 +11,3 @@ $databases['default']['default'] = array (
    'collation' => 'utf8mb4_general_ci',
 );
 $settings['hash_salt'] = json_encode($databases);
-
-if ( (!array_key_exists('HTTPS', $_SERVER)) && (PHP_SAPI !== 'cli') ) {
-  $new_url = $_SERVER['HTTP_HOST'];
-  $new_url .= $_SERVER['REQUEST_URI'];
-
-  header('HTTP/1.1 301 Moved Permanently');
-  header('Location: https://'. $new_url);
-  exit();
-}
