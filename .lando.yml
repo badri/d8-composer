@@ -1,0 +1,4 @@
+name: d8-composer
+recipe: drupal8
+config:
+  webroot: web
