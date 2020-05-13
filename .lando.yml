@@ -2,3 +2,15 @@ name: d8-composer
 recipe: drupal8
 config:
   webroot: web
+services:
+  node:
+    type: node
+    build:
+      - cd /app/web/themes/custom/tailwindcss && npm install
+      - cd /app/web/themes/custom/tailwindcss && npm run build
+tooling:
+  css-build:
+    service: node
+    cmd:
+      - cd /app/web/themes/custom/tailwindcss && npm install glob-all --save
+      - cd /app/web/themes/custom/tailwindcss && npm run build

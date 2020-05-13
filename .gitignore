@@ -25,3 +25,6 @@
 /.editorconfig
 /.gitattributes
 *~
+
+# theme generated files
+node_modules
