@@ -17,6 +17,7 @@ web/modules/contrib
 web/profiles/contrib
 web/themes/contrib
 web/sites/default/files
+composer-cache
 
 # Drupal shared resources.
 web/sites/default/settings.php

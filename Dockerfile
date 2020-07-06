@@ -16,18 +16,17 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer global require hirak/prestissimo
 
-# copy code
-COPY . /app
-
 # create user
 RUN useradd -u 1001 -r -g 0 -d /app -s /bin/bash -c "Default Application User" default \
     && mkdir -p /app \
     && chown -R 1001:0 /app && chmod -R g+rwX /app
 
+# copy code
+COPY . /app
 
 USER 1001
 
 WORKDIR /app
 
 # run composer
-RUN composer install --no-dev --prefer-dist --no-interaction --no-ansi --optimize-autoloader
+RUN COMPOSER_HOME=/app/composer-cache composer install --no-dev --prefer-dist --no-interaction --no-ansi --optimize-autoloader
