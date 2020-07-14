@@ -756,10 +756,8 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
-if (getenv('OPENSHIFT_BUILD_NAME')) {
-  if (file_exists($app_root . '/' . $site_path . '/settings.openshift.php')) {
-    include $app_root . '/' . $site_path . '/settings.openshift.php';
-  }
+if (file_exists($app_root . '/' . $site_path . '/settings.silta.php')) {
+  include $app_root . '/' . $site_path . '/settings.silta.php';
 }
 
 $settings['config_sync_directory'] = '../config/sync';
