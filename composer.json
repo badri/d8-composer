@@ -24,6 +24,8 @@
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/metatag": "^1.13",
         "drupal/page_manager": "^4.0@beta",
+        "drupal/purge": "^3.0",
+        "drupal/purge_purger_http": "^1.0",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
